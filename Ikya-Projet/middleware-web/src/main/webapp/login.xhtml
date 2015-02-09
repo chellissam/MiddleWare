@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>login</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+        <h:panelGrid>
+        <h:outputLabel value="username" for="username" />
+                    <h:inputText id="username" value="#{userController.selected.username}" title="username" required="true" requiredMessage="username is required"/>
+                    <h:outputLabel value="password" for="password" />
+                    <h:inputText id="password" value="#{userController.selected.password}" title="password" required="true" requiredMessage="password is required"/>
+                   
+                    <br />
+                    <h:commandLink action="#{userController.login()}" value="connect" />
+        </h:panelGrid> 
+            </h:form>
+    </h:body>
+</html>
+
