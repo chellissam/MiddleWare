@@ -8,9 +8,10 @@ package sessions;
 import com.middleware.model.Contact;
 import java.util.List;
 import javax.ejb.Local;
+import javax.ejb.LocalBean;
 
 
-@Local
+@LocalBean
 public interface ContactFacadeLocal {
 
     void create(Contact contact);

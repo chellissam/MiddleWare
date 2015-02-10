@@ -7,12 +7,14 @@
 package sessions;
 
 import com.middleware.model.Contact;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 
 @Stateless
+@LocalBean
 public class ContactFacade extends AbstractFacade<Contact> implements ContactFacadeLocal {
     @PersistenceContext(unitName = "com.middleware_middleware-ejb_ejb_1.0-SNAPSHOTPU")
     private EntityManager em;

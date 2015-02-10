@@ -57,7 +57,17 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{userController.prepareView}" value="add"/>
+                            <h:commandButton action="#{userController.add()}" value="Add">
+                                <f:param name="user" value="#{item.email}"></f:param>                                
+                            </h:commandButton>                            
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandButton action="challenge" value="Challenge">    
+                                <f:param name="email" value="#{item.email}"></f:param> 
+                            </h:commandButton>                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
@@ -65,7 +75,7 @@
                 <h:commandLink action="#{userController.prepareCreate}" value="create link"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="index"/>
+                <h:link outcome="/acceuil" value="acceuil"/>
             </h:form>
         </ui:define>
     </ui:composition>

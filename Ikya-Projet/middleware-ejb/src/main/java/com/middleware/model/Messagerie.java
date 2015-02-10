@@ -30,6 +30,7 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "Messagerie.findAll", query = "SELECT m FROM Messagerie m"),
     @NamedQuery(name = "Messagerie.findByIdMsg", query = "SELECT m FROM Messagerie m WHERE m.idMsg = :idMsg"),
+    @NamedQuery(name = "Messagerie.findByIdUser", query = "SELECT m FROM Messagerie m WHERE m.idUser2 = :idUser"),
     @NamedQuery(name = "Messagerie.findByDateMsg", query = "SELECT m FROM Messagerie m WHERE m.dateMsg = :dateMsg"),
     @NamedQuery(name = "Messagerie.findByTypeMsg", query = "SELECT m FROM Messagerie m WHERE m.typeMsg = :typeMsg"),
     @NamedQuery(name = "Messagerie.findByMsgLu", query = "SELECT m FROM Messagerie m WHERE m.msgLu = :msgLu")})

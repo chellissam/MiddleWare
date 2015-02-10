@@ -8,9 +8,10 @@ package sessions;
 import com.middleware.model.Defis;
 import java.util.List;
 import javax.ejb.Local;
+import javax.ejb.LocalBean;
 
 
-@Local
+@LocalBean
 public interface DefisFacadeLocal {
 
     void create(Defis defis);
