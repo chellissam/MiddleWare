@@ -90,8 +90,8 @@ public class UserController implements Serializable {
         Messagerie messagerie=new Messagerie();
         messagerie.setIdUser1(current);
         messagerie.setIdUser2(user);
-        messagerie.setContenu1("hello amigo issamo!");
-        messagerie.setContenu2("bonjour!!");
+        messagerie.setContenu1("Ajoute Moi SVP!");
+        messagerie.setContenu2("Ok !");
         messagerie.setTypeMsg("0");
         messagerie.setDateMsg(Calendar.getInstance().getTime());
 //ajout
