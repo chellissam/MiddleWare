@@ -211,11 +211,14 @@ public class UserController implements Serializable {
     public String prepareCreate() {
         current = new User();
         selectedItemIndex = -1;
-        return "Create";
+        return "/index";
     }
 
     public String create() {
-        try {            
+        try { 
+            current.setElo(100);
+            current.setNiveau("Debutant");
+            current.setDateAjout(Calendar.getInstance().getTime());
             System.out.println("user name: "+current.toString());
             getFacade().create(current);
             //JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("UserCreated"));
